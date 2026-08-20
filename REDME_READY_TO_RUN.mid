@@ -1,0 +1,47 @@
+# CyberShield – Cyber Crime Investigation System
+
+## Run the project
+
+### 1. Backend
+Open a terminal:
+
+```bash
+cd Server
+npm install
+```
+
+Create `.env` from `.env.example` and set your MySQL credentials.
+
+Import `database.sql` into MySQL, then run:
+
+```bash
+npm run dev
+```
+
+If the project does not have a dev script, use:
+
+```bash
+node server.js
+```
+
+### 2. Frontend
+Open a second terminal:
+
+```bash
+cd Client
+npm install
+npm run dev
+```
+
+Then open the Vite URL shown in the terminal, normally:
+
+`http://localhost:5173`
+
+## Important
+The frontend `Protected.jsx` import is explicitly written as:
+
+`./components/Protected.jsx`
+
+This avoids the Vite "Failed to resolve import ./components/Protected" problem caused by an incomplete/old extracted copy.
+
+If you previously ran an old copy, delete that old Client folder and extract this ZIP again before running `npm install`.
